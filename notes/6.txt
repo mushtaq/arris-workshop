@@ -1,0 +1,24 @@
+
+def lenght(list: List[Int]) = list match {
+	case Nil => 0
+	case head :: tail => length(tail) + 1
+}
+
+
+
+def transform(jsValue: JsValue): JsValue = jsValue match {
+	case JsNumber(n) => JsNumber(n * n)
+	case JsBoolean(b) => JsBoolean(!b)
+	case JsString(s) if asdasd => JsString(s"Heloo... ")
+	case JsString("")  => JsString("empty")
+
+	case JsArray(jsons: Seq[JsValue])   => JsArray(jsons.map(transform))
+	case JsObjet(pairs: Seq[(String, JsValue)])  => JsObject(pairs.map(x: () => transformPair(x)))
+
+	case _ => jsValue
+}
+
+def transformPair(t: (String, JsValue)): (String, JsValue) = t match {
+	case ("m" | "n", _) => t
+	case (key, json) => (key, transform(json))
+}

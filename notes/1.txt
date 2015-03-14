@@ -1,0 +1,58 @@
+
+
+FP
+Buzz
+Project demand
+Popular
+New
+Resume
+=========
+
+
+
+class Utils {
+  def map(xs: Seq[Int], f: Int ⇒ Int): Seq[Int] = {
+	{
+		while loop
+		Seq(1, 2, 3).iterator
+		val buf = scala.collection.mutable.Buffer.empty[Int]
+		buf += 4
+		buf.toSeq
+	}
+
+	{
+		while loop
+		Seq(1, 2, 3).iterator
+		var result = Seq.empty[Int]
+		result = result :+ 4
+		result
+	}
+
+	{
+		no while
+		no iterator
+		no var
+		recursion
+		input.head
+		input.tail
+		result :+ 4
+		4 +: result
+	}
+  }
+}
+
+
+class UtilsTest extends FunSuite with MustMatchers {
+
+  val utils = new Utils
+
+  test("map") {
+     utils.map(Seq(1, 2, 3), x ⇒ x * x) mustEqual Seq(1, 4, 9)
+     utils.map(Seq(1, 2, 3), x ⇒ x + 1) mustEqual Seq(2, 3, 4)
+     utils.map(Seq(1, 2, 3), x ⇒ x - 1) mustEqual Seq(0, 1, 2)
+  }
+
+}
+
+
+

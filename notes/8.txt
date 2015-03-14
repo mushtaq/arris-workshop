@@ -1,0 +1,14 @@
+
+
+case class
+
+class
+	- getter
+	- copy
+	- toString
+	- equals
+	- hashcode
+
+object
+	- apply
+	- unapply

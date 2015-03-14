@@ -1,0 +1,40 @@
+
+1.scala
+===========
+package a {
+	class A1	
+}
+
+2.scala
+==========
+package a {
+	package b {
+		package c {
+			class A {
+				private[a] def m = new A1
+				def x(a: A) = a.m
+				def y = m + 5
+			}
+		}
+	}
+}
+
+3.scala
+============
+package a
+package b
+package c
+
+class A {
+	def m = 10
+
+}
+
+
+4.scala
+===========
+package a.b.c
+class A {
+	def m = new A1 //compile error
+
+}

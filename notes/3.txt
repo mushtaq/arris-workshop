@@ -1,0 +1,19 @@
+
+
+trait A {
+	def a = 1
+}
+
+trait B {
+	def b = "x"
+}
+
+val dd = new (A with B)
+class C extends (A with B)
+
+dd.a
+dd.b
+
+new C().a
+new C().b
+

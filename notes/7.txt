@@ -1,0 +1,28 @@
+
+
+
+scala.collection
+	Seq
+	Set
+	Map
+
+scala.collection.immutable
+	Seq extends scala.collection.Seq
+		IndexedSeq
+			Vector
+		LinearSeq
+			List
+			... String
+	Set ...
+	Map ..
+
+scala.collection.mutable
+	Seq extends scala.collection.Seq
+		IndexedSeq
+			Buffer
+			... Arrays
+		LinearSeq
+			LinkedList
+	Set ..
+	Map ..
+

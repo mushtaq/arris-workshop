@@ -1,0 +1,45 @@
+
+sealed trait List[+T]
+case object Nil extends List[Nothing]
+case class ::[T](head: T, tail: List[T])
+
+
+================
+sealed trait Option[T] {
+	def hello: String
+}
+case class Some[T](value: T) extends Option[T] {
+	def hello = Some(s"Hello, $value")
+}
+case object None extends Option[Nothing] {
+	def hello = None
+}
+
+
+====================================
+if 		A <: B  (Nothing <: String)
+
+then 	Option[A] <: Option[B] (Option[Nothing] <: Option[String])
+
+then    Array[A] <: Array[B]
+
+trait Animal
+class Tiger extends Animal
+class Lion extends Animal
+
+val tigers: Array[Tiger] = Array(new Tiger)
+val animals: Array[Animal] = tigers
+animals(0): Animal = new Lion
+
+Tiger <: Animal
+Writer[Animal] <: Writer[Tiger]
+
+
+Function1[-S, +T]
+
+
+
+
+
+
+
